@@ -36,10 +36,17 @@
       "is_default": true,
       "suggest_url": "https://kagisuggest.com/api/autosuggest?q={searchTerms}",
       "encoding": "UTF-8"
-    },
-    "chrome_url_overrides" : {
-      "newtab": "https://www.kagi.com/"
     }
   },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "web_accessible_resources": [{
+    "resources": ["redirect.js"],
+    "matches": ["<all_urls>"]
+  }],
   "incognito": "spanning"
 }
