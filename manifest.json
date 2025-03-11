@@ -28,7 +28,6 @@
   "host_permissions": ["https://*.kagi.com/*"],
   "chrome_settings_overrides": {
     "homepage": "https://www.kagi.com/",
-    "newtab": "https://www.kagi.com/",
     "search_provider": {
       "name": "Kagi",
       "search_url": "https://kagi.com/search?q={searchTerms}",
@@ -37,6 +36,9 @@
       "is_default": true,
       "suggest_url": "https://kagisuggest.com/api/autosuggest?q={searchTerms}",
       "encoding": "UTF-8"
+    },
+    "chrome_url_overrides" : {
+      "newtab": "https://www.kagi.com/"
     }
   },
   "incognito": "spanning"
